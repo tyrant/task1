@@ -218,7 +218,7 @@ app.get('/stats', (req, res) => {
   let stats = {};
 
   // avg, max, min:
-  call.find({ salvoNo }).then((docs, err) => {
+  call.find({ salvoNo: parseInt(salvoNo) }).then((docs, err) => {
 
     let maxDuration = 0;
     let minDuration = 999999999;
